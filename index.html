@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>工号转二维码小工具</title>
+  <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-inner">
+        <img src="./images/logo.png" alt="" class="logo">
+        <span class="name">二维码小工具</span>
+      </div>
+    </header>
+    <article>
+      <div class="tabs">
+        <div class="tab-item active" data-index="1"><span>工号</span></div>
+        <div class="tab-item" data-index="2"><span>网址</span></div>
+      </div>
+      <div class="left-area">
+        <div class="content-item active" data-index="1">
+          <div class="input-area">
+            <input type="text" id="work-num" name="work-num" placeholder="请输入工号" />
+            <p class="preview-label" style="display: none">二维码内容:</p>
+            <input type="text" id="preview-link" placeholder="预览地址" style="display: none" />
+            <p class="work-num-tips" style="display: none"></p>
+          </div>
+          <div class="button-area">
+            <button id="work-num-to-qrcode">生成二维码</button>
+          </div>
+        </div>
+        <div class="content-item" data-index="2">
+          <div class="input-area">
+            <input type="text" id="link-address" name="link-address" placeholder="请输入网址" />
+            <p class="link-address-tips" style="display: none"></p>
+          </div>
+          <div class="button-area">
+            <button id="link-address-to-qrcode">生成二维码</button>
+          </div>
+        </div>
+      </div>
+      <div class="preview">
+        <div class="preview-inner">
+          <span class="default">此处生成二维码</span>
+          <div id="qrcode"></div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <p class="link">
+        <a id="goto-desktop" style="display: none">访问桌面版</a>
+        <a href="http://news.10jqka.com.cn/20100105/c61833421.shtml" target="_blank">关于同花顺</a>
+        <span class="split">|</span>
+        <a href="http://www.10jqka.com.cn/hexin_contact.htm" target="_blank">联系我们</a>
+      </p>
+      <p class="copyright">©2018-2019 khtest.10jqka.com.cn 浙江核新同花顺网络信息股份有限公司版权所有<br>ICP证：浙ICP备09003598号</p>
+    </footer>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./scripts/qrcode.min.js"></script>
+  <script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+</html>
